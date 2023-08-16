@@ -177,7 +177,7 @@ def find_arbitrage_opportunities():
                     'team1_bookmaker': best_odds[2], # Best bookmaker for home winning
                     'draw_bookmaker': best_odds[4], # Best bookmaker for draw
                     'team2_bookmaker': best_odds[6], # Best bookmaker for away winning
-                    'percent_profit': round(100.0/sum_of_inverses, 2), # Guaranteed profit for opportunity
+                    'percent_profit': round((100.0/sum_of_inverses) - 100, 2), # Guaranteed profit for opportunity
                     'percent_team1': round(100.0/(sum_of_inverses * best_odds[1]), 2), # Percent to bet on home team
                     'percent_draw': round(100.0/(sum_of_inverses * best_odds[3]), 2), # Percent to bet on draw
                     'percent_team2': round(100.0/(sum_of_inverses * best_odds[5]), 2) # Percent to bet on away team
